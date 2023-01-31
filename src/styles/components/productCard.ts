@@ -43,6 +43,11 @@ export const CardContainer = styled.div`
   }
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.8rem;
@@ -54,9 +59,14 @@ export const CardContainer = styled.div`
     color: white;
     width: 100%;
     height: 4rem;
-    display: block;
+
     cursor: pointer;
     transition: 0.5s linear;
+
+    > svg {
+      width: 1.6rem;
+      height: auto;
+    }
 
     &:hover {
       background: #232323;

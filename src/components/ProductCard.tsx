@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { FiShoppingBag } from 'react-icons/fi'
 
 import { CardContainer, CardImg } from '../styles/components/productCard'
 import { Price } from './Price'
@@ -24,7 +25,10 @@ export function ProductCard() {
         <p>Redesigned from scratch and completely revised.</p>
       </div>
 
-      <button>{'COMPRAR'}</button>
+      <button>
+        <FiShoppingBag />
+        <span>{'COMPRAR'}</span>
+      </button>
     </CardContainer>
   )
 }
