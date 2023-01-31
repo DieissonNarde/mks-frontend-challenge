@@ -14,14 +14,14 @@ export const CartButtonContent = styled.button`
   gap: 1.6rem;
 
   > div svg {
-    width: 1.9rem;
+    width: 2.4rem;
     height: auto;
   }
 
   > div span {
     font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    font-size: 2rem;
+    line-height: 2.2em;
     color: #000000;
   }
 `

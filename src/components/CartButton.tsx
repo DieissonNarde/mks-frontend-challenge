@@ -1,4 +1,4 @@
-import { FaShoppingCart } from 'react-icons/fa'
+import { FiShoppingCart } from 'react-icons/fi'
 
 import { CartButtonContent } from '../styles/components/cartButton'
 
@@ -6,7 +6,7 @@ export default function CartButton() {
   return (
     <CartButtonContent>
       <div>
-        <FaShoppingCart />
+        <FiShoppingCart />
       </div>
       <div>
         <span>0</span>
