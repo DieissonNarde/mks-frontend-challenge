@@ -1,5 +1,9 @@
 import { PriceContent } from '../styles/components/price'
 
-export function Price() {
-  return <PriceContent>R$ {'399'}</PriceContent>
+interface PriceProps {
+  price: string
+}
+
+export function Price({ price }: PriceProps) {
+  return <PriceContent>{`R$ ${price}`}</PriceContent>
 }
