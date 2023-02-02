@@ -1,7 +1,7 @@
 import { PriceContent } from '../styles/components/price'
 
 interface PriceProps {
-  price: string
+  price: number
 }
 
 export function Price({ price }: PriceProps) {
