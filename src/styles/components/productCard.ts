@@ -2,11 +2,15 @@ import styled from 'styled-components'
 
 export const CardContainer = styled.div`
   width: 25.5rem;
-  height: fit-content;
+  height: auto;
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
   border-radius: 8px;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   margin: 1rem;
   transition: 0.5s linear;
@@ -26,6 +30,7 @@ export const CardContainer = styled.div`
       justify-content: space-between;
 
       h3 {
+        max-width: 12.4rem;
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 1.9rem;
@@ -75,8 +80,8 @@ export const CardContainer = styled.div`
 `
 
 export const CardImg = styled.div`
-  width: 26rem;
-  height: 30rem;
+  width: 25.5rem;
+  height: 24rem;
   position: relative;
   border-radius: 4px;
   border: 1px solid #e7e7e7;
