@@ -10,13 +10,14 @@ import {
 
 interface ICartProps {
   open?: boolean
+  id?: string
 }
 
-export function Cart({ open = false }: ICartProps) {
+export function Cart({ open = false, id }: ICartProps) {
   const isHidden = open ? true : false
 
   return (
-    <CartContainer open={open} aria-hidden={!isHidden}>
+    <CartContainer open={open} aria-hidden={!isHidden} id={id}>
       <CartHeader>
         <h2>Carrinho de Compras</h2>
         <AiFillCloseCircle />

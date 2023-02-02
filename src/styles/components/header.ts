@@ -11,7 +11,7 @@ export const HContent = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding-inline: 4%;
 
   > .logo {
@@ -30,8 +30,6 @@ export const HContent = styled.div`
   }
 
   @media (min-width: 1024px) {
-    justify-content: space-between;
-
     > .logo {
       font-size: 4rem;
     }
