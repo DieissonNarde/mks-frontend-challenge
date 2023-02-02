@@ -6,3 +6,7 @@ export interface IProduct {
   photo: string
   price: string
 }
+
+export interface ICartItem extends IProduct {
+  amount: number
+}
