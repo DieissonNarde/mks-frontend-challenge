@@ -1,6 +1,8 @@
 import { IProduct } from '@/types/product'
 import Image from 'next/image'
 import { FiShoppingBag } from 'react-icons/fi'
+import { useDispatch } from 'react-redux'
+import { addItem } from '@/redux/cartSlice'
 
 import { CardContainer, CardImg } from '../styles/components/productCard'
 import { Price } from './Price'
@@ -10,6 +12,8 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const dispatch = useDispatch()
+
   return (
     <CardContainer>
       <CardImg>
@@ -32,7 +36,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <p>{product.description}</p>
       </div>
 
-      <button>
+      <button onClick={() => dispatch(addItem(product))}>
         <FiShoppingBag />
         <span>COMPRAR</span>
       </button>
