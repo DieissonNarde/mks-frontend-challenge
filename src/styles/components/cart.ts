@@ -21,8 +21,11 @@ export const CartContainer = styled.aside<ICartContent>`
   background-color: ${props => props.theme.colors.primary};
   box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
 
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+  transition: transform 0.3s ease-in-out;
+
   @media (min-width: 600px) {
-    width: 40rem;
+    width: 50rem;
   }
 
   @media (min-width: 1200px) {
@@ -49,8 +52,12 @@ export const CartHeader = styled.div`
     color: white;
   }
 
+  > svg {
+    color: black;
+    cursor: pointer;
+  }
+
   @media (min-width: 1024px) {
-    margin-block: 4rem;
     padding: 0 2.2rem 0 4.7rem;
     font-size: 3.8rem;
 
@@ -69,7 +76,7 @@ export const ListItems = styled.div`
   justify-content: flex-start;
   gap: 1.3rem;
 
-  padding: 1rem 3.5rem;
+  padding: 1rem 2rem;
 
   overflow-y: auto;
   scrollbar-width: thin;
@@ -90,10 +97,10 @@ export const CartTotal = styled.div`
   font-size: 2.8rem;
   color: white;
 
-  padding: 3.5rem 1.5rem 3.5rem 3.2rem;
+  padding: 1rem 1.5rem 2rem 3.2rem;
 
   @media (min-width: 1024px) {
-    padding: 3.5rem 2.2rem 3.5rem 4.7rem;
+    padding: 1rem 2.2rem 2rem 4.7rem;
   }
 `
 
@@ -109,6 +116,8 @@ export const CartButton = styled.button`
   padding-block: 2.6rem;
   background-color: ${props => props.theme.colors.button};
   border: none;
+
+  cursor: pointer;
 
   &:hover {
     background: #232323;
