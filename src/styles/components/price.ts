@@ -6,7 +6,7 @@ export const PriceContent = styled.span`
   padding: 0.5rem 1rem;
 
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 1.5rem;
   font-weight: 700;
 `
