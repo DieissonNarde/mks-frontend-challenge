@@ -13,6 +13,8 @@ export const CartButtonContent = styled.button`
   justify-content: center;
   gap: 1.6rem;
 
+  cursor: pointer;
+
   > div svg {
     width: 2.4rem;
     height: auto;

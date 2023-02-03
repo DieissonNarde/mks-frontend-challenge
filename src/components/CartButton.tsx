@@ -3,11 +3,13 @@ import { FiShoppingCart } from 'react-icons/fi'
 import { CartButtonContent } from '../styles/components/cartButton'
 
 interface CartButtonProps {
+  totalItems: number
   open: boolean
   setOpen: (open: boolean) => void
 }
 
 export default function CartButton({
+  totalItems,
   open,
   setOpen,
   ...props
@@ -25,7 +27,7 @@ export default function CartButton({
         <FiShoppingCart />
       </div>
       <div>
-        <span>0</span>
+        <span>{totalItems}</span>
       </div>
     </CartButtonContent>
   )
