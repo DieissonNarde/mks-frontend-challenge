@@ -9,15 +9,28 @@ import {
   CardItemContainer,
   IconRemove
 } from '@/styles/components/cartItem'
+import { useDispatch } from 'react-redux'
+import { removeItem } from '@/redux/cartSlice'
+import { ProductAmount } from './ProductAmount'
+import { useEffect, useState } from 'react'
 
 interface CartItemProps {
   productItem: ICartItem
 }
 
 export function CartItem({ productItem }: CartItemProps) {
+  const [price, setPrice] = useState<number>(0)
+  const [amount, setAmount] = useState<number>(0)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    setPrice(Number(productItem.price))
+    setAmount(productItem.amount)
+  }, [productItem.amount])
+
   return (
     <CardItemContainer>
-      <IconRemove>
+      <IconRemove onClick={() => dispatch(removeItem(productItem.id))}>
         <AiOutlineClose />
       </IconRemove>
       <CardImg>
@@ -34,7 +47,9 @@ export function CartItem({ productItem }: CartItemProps) {
       <CardInfo>
         <h4>{productItem.name}</h4>
 
-        <Price price={Number(productItem.price)} />
+        <ProductAmount productId={productItem.id} amount={amount} />
+
+        <Price price={price * amount} />
       </CardInfo>
     </CardItemContainer>
   )

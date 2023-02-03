@@ -33,25 +33,27 @@ export const IconRemove = styled.button`
   font-size: 3.2rem;
   color: black;
   background: none;
+  border: none;
+
+  cursor: pointer;
 
   @media (min-width: 1024px) {
-    font-size: 1.2rem;
-    padding: 0.3rem;
+    top: -1rem;
+    right: -1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    padding: 0.4rem;
+    border: none;
     border-radius: 100%;
     background: black;
-    color: white;
-    top: -9px;
-    right: -9px;
   }
 `
 
 export const CardImg = styled.div`
   position: relative;
   width: 8rem;
-  height: 9.5rem;
-
   border-radius: 4px;
-  border: 1px solid #e7e7e7;
 
   .image {
     width: 100%;
@@ -72,7 +74,7 @@ export const CardInfo = styled.div`
   h4 {
     width: 100%;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.9rem;
     text-align: center;
     color: ${props => props.theme.colors.text};
